@@ -1,11 +1,11 @@
 function sayHello() {
-    document.querySelector("h3").textContent =
-        "Hej " +
-        document.querySelector("#name").value +
-        ". Du er " +
-        document.querySelector("#age").value +
-        " år gammel. Din mail er: " +
-        document.querySelector("#mail").value;
+  const fullName = document.querySelector("#name").value;
+  const age = document.querySelector("#age").value;
+  const mail = document.querySelector("#mail").value;
+
+  document.querySelector(
+    "h3"
+  ).textContent = `Hej ${fullName}. Du er ${age} år gammel. Din mail er: ${mail}`;
 }
 
 document.querySelector("button").addEventListener("click", sayHello);
